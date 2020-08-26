@@ -8,11 +8,8 @@
 }
 
 body {
-  width: 100vw;
   height: 100vh;
-  background: lightslategray;
-  /* background: url(assets\sam-wheat-1299513-unsplash.jpg) no-repeat center center
-    fixed; */
+  background-size: cover;
 }
 
 .container {
@@ -27,8 +24,8 @@ body {
 }
 
 .navigation {
-  width: 25px;
-  height: 25px;
+  min-width: 30px;
+  min-height: 30px;
   background: white;
   border-radius: 50%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -41,6 +38,7 @@ body {
 }
 
 .card {
+  max-width: 600px;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -52,13 +50,23 @@ body {
 
 .card .head {
   font-size: 114px;
-  line-height: 12px;
-  color: #eb5757;
+  color: green;
 }
 
 .card .body {
   font-size: 20px;
 }
+
+.card #spinner {
+  display: none;
+  margin: 0 auto;
+}
+/* .card .body::before {
+  content: url(/assets/quote-start.svg);
+  width: 1px;
+  height: 1px;
+  margin: 10px 0;
+} */
 
 .card .foot {
   display: flex;
@@ -66,4 +74,12 @@ body {
 
   font-size: 20px;
   font-weight: bold;
+
+  vertical-align: text-bottom;
+}
+
+.card .foot::after {
+  content: url(/assets/quote-end.svg);
+  float: right;
+  margin: 10px 0;
 }
